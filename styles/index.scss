@@ -1,0 +1,12 @@
+@import '_colors';
+@import '_home';
+@import '_navbar';
+
+$background-image: url('../public/images/tealbookshelf.png');
+
+body {  
+    margin: 0;
+    padding: 0;
+    background-image: $background-image repeat;
+    background-color: $dark_teal;
+  }
