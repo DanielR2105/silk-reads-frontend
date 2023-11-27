@@ -1,6 +1,6 @@
 // pages/_app.tsx
 import '../styles/index.scss';
-import Navbar from '../components/navbar';
+import Navbar from '../components/nav/navbar';
 import Footer from '../components/footer';
 import { NextComponentType } from 'next';
 import { AppProps } from 'next/app';

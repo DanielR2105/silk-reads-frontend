@@ -7,6 +7,6 @@ $background-image: url('../public/images/tealbookshelf.png');
 body {  
     margin: 0;
     padding: 0;
+    background-color: $light_teal;
     background-image: $background-image repeat;
-    background-color: $dark_teal;
   }
