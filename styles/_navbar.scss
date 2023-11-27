@@ -4,24 +4,47 @@
     position: fixed;
     display: flex;
     width: 100%;
-    height: 30px;
+    height: 50px;
     background-color: $light_teal;
-    z-index: 1000;
-    padding: 1rem;
 
     &__logo {
-        max-width: 200px;
-        height: auto;
-        margin-right: 1rem;
-        display: flex;
+        margin-left: 100px;
+        width: 80px;
+        height: 55px;
+        margin-top: -5px;
     }
 
     &__button {
+        display: flex;
+        align-items: center;
+        &:hover {
+            background-color: $dark_teal;
+        }
+        &__text {
+            background-color: transparent;
+            border: none;
+            font-size: large;
+            font-weight: bold;
+            cursor: pointer;
+            color: $light_orange;
+        }
+        &__dropdown {
+            border: 1px solid $light_orange;
+            border-radius: 5px;
+            background-color: $light_teal;
+            position: absolute;
+        }
+    }
+}
+
+.nestedDropdown {
+    &__title {
         background-color: transparent;
         border: none;
         font-size: large;
         font-weight: bold;
         cursor: pointer;
-        color: $medium_orange;
+        color: $light_orange;
     }
+
 }
