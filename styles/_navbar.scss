@@ -33,6 +33,7 @@
             border-radius: 5px;
             background-color: $light_teal;
             position: absolute;
+
         }
     }
 }
@@ -45,6 +46,22 @@
         font-weight: bold;
         cursor: pointer;
         color: $light_orange;
-    }
 
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-left: 14px;
+        &__title {
+        background-color: transparent;
+        border: none;
+        font-size: large;
+        cursor: pointer;
+        color: $light_orange;
+        }
+        &__title:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
 }

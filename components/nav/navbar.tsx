@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import DiscoverDropdown from './discover';
+import HubDropdown from './hub';
 
 const Navbar: React.FC = () => {
   return (
@@ -21,10 +22,10 @@ const Navbar: React.FC = () => {
           </Link>
           </div>
           <div className='navbar__button'>
-          <DiscoverDropdown />
+            <DiscoverDropdown />
           </div>
           <div className='navbar__button'>
-          <button className='navbar__button__text'>Hub ▾</button>
+            <HubDropdown />
           </div>
       </div>
     </nav>

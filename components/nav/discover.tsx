@@ -6,15 +6,21 @@ const DiscoverDropdown: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
   
     const handleToggleOpen = () => {
-      setIsOpen(!isOpen);
+      setIsOpen(true);
     };
+    const handleToggleClose = () => {
+        setIsOpen(false)
+    }
 
   return (
-    <div>
+    <div
+    onMouseEnter={handleToggleOpen}
+    onMouseLeave={handleToggleClose}
+    >
         <div className='navbar__button'>
-        <button className='navbar__button__text' onClick={handleToggleOpen}>
-            Discover ▾
-        </button>
+            <button className='navbar__button__text'>
+                Discover ▾
+            </button>
         </div>
         {isOpen && (
             <div className='navbar__button__dropdown'>

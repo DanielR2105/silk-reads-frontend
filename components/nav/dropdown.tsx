@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Link from "next/link";
 
-interface SubmenuProps {
+type SubmenuProps = {
     title: string;
     links?: { text: string; href: string; isTitle?: boolean }[];
   }
   
 
-interface DropdownProps {
-    title: string;
+type DropdownProps = {
+    title?: string;
     submenus?: SubmenuProps[];
     links?: { text: string; href: string; isTitle?: boolean }[];
 }
@@ -29,7 +29,7 @@ const Dropdown: React.FC<DropdownProps> = ({ title, links }) => {
                 <div className="nestedDropdown__links"> 
                     {links && links.map((link, index) => (
                         <Link key={index} href={link.href}>
-                            <button className="nestedDropdown__link__title">
+                            <button className="nestedDropdown__links__title">
                                 {link.text} 
                             </button>
                         </Link>
