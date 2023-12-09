@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DiscoverDropdown from './discover';
 import HubDropdown from './hub';
+import Searchbar from './searchbar';
 
 const Navbar: React.FC = () => {
   return (
@@ -26,6 +27,9 @@ const Navbar: React.FC = () => {
           </div>
           <div className='navbar__button'>
             <HubDropdown />
+          </div>
+          <div>
+            <Searchbar />
           </div>
       </div>
     </nav>

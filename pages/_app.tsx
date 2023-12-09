@@ -7,11 +7,13 @@ import { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div>
       <Navbar />
-      <Component {...pageProps} className="RenderedComponent"/>
+      <div  className="renderedComponent">
+      <Component {...pageProps}/>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
