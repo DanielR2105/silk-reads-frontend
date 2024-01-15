@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const HubDropdown: React.FC = () => {
+const profileDropdown: React.FC = () => {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -19,20 +19,30 @@ const HubDropdown: React.FC = () => {
         >
             <div className="navbar__button">
                 <button className="navbar__button__text" >
-                  Your Hub ▾
+                <img src='/images/user.png' className='navbar__button__icon'/>
                 </button>
             </div>
             {isOpen && (
                 <div className="navbar__button__dropdown">
-                    <Link href={"/hub/discussions"} >
+                    <Link href={"/profile"} >
                     <button className="nestedDropdown__links__title">
-                        Discussions
+                        Profile
+                    </button>
+                    </Link>
+                    <Link href={"/friends"} >
+                    <button className="nestedDropdown__links__title">
+                        Friends
+                    </button>
+                    </Link>
+                    <Link href={"/groups"} >
+                    <button className="nestedDropdown__links__title">
+                        Book Clubs
                     </button>
                     </Link>
                 </div>
             )}
         </div>
-    )
+    );
 }
 
-export default HubDropdown
+export default profileDropdown;

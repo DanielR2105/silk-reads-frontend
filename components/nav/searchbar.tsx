@@ -9,8 +9,17 @@ const Searchbar: React.FC = () => {
         setIsExpanded(!isExpanded);
     }
 
+    const handleExpand = () => {
+        setIsExpanded(true);
+    }
+
+    const handleClose = () => {
+        setIsExpanded(false);
+    }
+
     const handleSearch = () => {
-        console.log(`Searching for ${searchQuery}`);
+        alert(`Searching for "${searchQuery}"`);
+        setSearchQuery("");
     }
 
     const handleClear = () => {
@@ -19,26 +28,30 @@ const Searchbar: React.FC = () => {
     }
 
     return (
-    <div className={`searchbarContainer${isExpanded ? "__expanded" : ""}`}>
+    <div className={`searchbarContainer${isExpanded ? "__expanded" : ""}`} onMouseEnter={handleExpand} onMouseLeave={handleClose}>
         <div className="searchbar"> 
-        <button className="searchbar__searchButton" onClick={isExpanded ? handleSearch : handleExpandToggle}>
-             🔍
-        </button>
+
         {isExpanded && (
             // TODO: Fix issue where input and clear are being rendered under the search bar
-            <div>
+            <div className="searchbar__inputContainer" >
+                         <button className="searchbar__clear" onClick={handleClear}>
+              x
+         </button>
                     <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search Silk Reads"
                     className="searchbar__input"
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                 />
-         <button className="searchbar__clear" onClick={handleClear}>
-              ❌
-         </button>
+
          </div>
       )}
+              <button className="searchbar__searchButton" onClick={isExpanded ? handleSearch : handleExpandToggle}
+              >
+             🔍
+        </button>
       </div>
         </div>
     );
