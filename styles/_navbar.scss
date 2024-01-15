@@ -4,11 +4,13 @@
     position: fixed;
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 55px;
+    margin: 0;
+    padding: 0;
     background-color: $light_teal;
 
     &__logo {
-        margin-left: 100px;
+        margin-left: 40px;
         width: 80px;
         height: 55px;
         margin-top: -5px;
@@ -32,9 +34,22 @@
             border: 1px solid $light_orange;
             border-radius: 5px;
             background-color: $light_teal;
-            position: absolute;
+            position: fixed;
 
         }
+        &__icon {
+            width: 35px;
+            background-color: transparent;
+            margin: 8px;
+        }
+    }
+    &__spacer {
+        margin-left: 700px;
+    }
+    &__iconButton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 }
 
@@ -65,3 +80,81 @@
         }
     }
 }
+
+.searchbar {
+    position: absolute;
+    display: flex;
+   margin-left: 350px;
+   margin-right: 150px;
+    align-items: center;
+    background-color: #F3F1EB;
+    padding: 10px 20px; /* Adjust padding for icons */
+    border-radius: 50px; /* Initial border-radius for circle shape */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    &__expanded {
+      width: 300px; /* Ensure horizontal expansion */
+      border-radius: 15px; /* Adjusted border-radius for capsule shape when expanded */
+      max-height: 50px; /* Prevent vertical expansion */
+    }
+  
+    &__container {
+      flex-grow: 1; /* Allow input to fill remaining space */
+      display: flex;
+      align-items: center;
+      /* Clip-path for cylinder shape */
+      clip-path: inset(0 10px 0 10px);
+    }
+  
+    &__searchButton {
+      cursor: pointer;
+      font-size: 1.2em;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: #333;
+      transition: font-size 0.1s ease, opacity 0.3s ease; /* Separate transitions for smoother animation */
+      margin-right: 10px; /* Ensure icon stays within container */
+  
+      &--expanded {
+        font-size: 0.8em; /* Adjust size for expanded state */
+        opacity: 0.5; /* Reduce opacity */
+      }
+    }
+  
+    &__input {
+      flex-grow: 1; /* Expand input in remaining space */
+      padding: 8px;
+      border: none;
+      background-color: #F3F1EB;
+      outline: none;
+    }
+  
+    &__clear {
+      cursor: pointer;
+      font-size: 1.2em;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: #333;
+      transition: opacity 0.3s ease;
+      margin-left: 10px; /* Ensure icon stays within container */
+    }
+
+    .searchbar &__expanded {
+        .searchbar__input,
+        .searchbar__clear {
+          opacity: 5;
+          z-index: 5;
+        }
+      }
+  
+    &:not(&__expanded) {
+      width: auto;
+      padding: 10px 20px; /* Consistent padding */
+      box-shadow: none;
+    }
+  }
+  
+  

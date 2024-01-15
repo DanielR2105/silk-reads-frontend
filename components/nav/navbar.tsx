@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import DiscoverDropdown from './discover';
 import HubDropdown from './hub';
+import Searchbar from './searchbar';
+import ProfileDropdown from './profileDropdown';
 
 const Navbar: React.FC = () => {
   return (
@@ -27,6 +29,32 @@ const Navbar: React.FC = () => {
           <div className='navbar__button'>
             <HubDropdown />
           </div>
+          <div  className='navbar__searchbar'>
+            <Searchbar />
+          </div>
+          <div className='navbar__spacer' >
+          </div>
+           <div className='navbar__button'>
+            <button className='navbar__iconButton'>
+              <img src='/images/bell.png' className='navbar__button__icon'/>
+            </button>
+            </div>
+            <div className='navbar__button'>
+            <button className='navbar__iconButton' >
+              <img src='/images/email.png' className='navbar__button__icon'/>
+            </button>
+            </div>
+            <div className='navbar__button'>
+            <button className='navbar__iconButton'>
+              <img src='/images/work-group.png' className='navbar__button__icon'/>
+            </button>
+            </div>
+          <div className='navbar__button'>
+            {/* <button className='navbar__button__text'> 
+              <img src='/images/user.png' className='navbar__button__icon'/>
+            </button> */}
+            <ProfileDropdown />
+           </div>
       </div>
     </nav>
   );
