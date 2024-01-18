@@ -3,8 +3,12 @@ import DiscoverDropdown from './discover';
 import HubDropdown from './hub';
 import Searchbar from './searchbar';
 import ProfileDropdown from './profileDropdown';
+import { useState } from 'react';
 
 const Navbar: React.FC = () => {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <nav>
         <div className='navbar' >
@@ -34,27 +38,35 @@ const Navbar: React.FC = () => {
           </div>
           <div className='navbar__spacer' >
           </div>
+          {loggedIn ? (
+            <div className='navbar__loggedIn' >
+            <div className='navbar__button'>
+             <button className='navbar__iconButton'>
+               <img src='/images/bell.png' className='navbar__button__icon'/>
+             </button>
+             </div>
+             <div className='navbar__button'>
+             <button className='navbar__iconButton' >
+               <img src='/images/email.png' className='navbar__button__icon'/>
+             </button>
+             </div>
+             <div className='navbar__button'>
+             <button className='navbar__iconButton'>
+               <img src='/images/work-group.png' className='navbar__button__icon'/>
+             </button>
+             </div>
            <div className='navbar__button'>
-            <button className='navbar__iconButton'>
-              <img src='/images/bell.png' className='navbar__button__icon'/>
-            </button>
+             {/* <button className='navbar__button__text'> 
+               <img src='/images/user.png' className='navbar__button__icon'/>
+             </button> */}
+             <ProfileDropdown />
             </div>
-            <div className='navbar__button'>
-            <button className='navbar__iconButton' >
-              <img src='/images/email.png' className='navbar__button__icon'/>
-            </button>
             </div>
-            <div className='navbar__button'>
-            <button className='navbar__iconButton'>
-              <img src='/images/work-group.png' className='navbar__button__icon'/>
-            </button>
-            </div>
-          <div className='navbar__button'>
-            {/* <button className='navbar__button__text'> 
-              <img src='/images/user.png' className='navbar__button__icon'/>
-            </button> */}
-            <ProfileDropdown />
-           </div>
+          ) : (
+              <div className='navbar__button'>
+                <button className='navbar__button__text' >Get Started!</button>
+              </div>
+          )}
       </div>
     </nav>
   );
