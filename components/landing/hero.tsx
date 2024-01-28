@@ -8,46 +8,6 @@ const Hero: React.FC = () => {
             <button className="hero__tagline__button">
                 Get Started
             </button>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
-            <div>d</div>
       </div>
     );
   };
