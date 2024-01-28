@@ -35,13 +35,13 @@ const Searchbar: React.FC = () => {
             // TODO: Fix issue where input and clear are being rendered under the search bar
             <div className="searchbar__inputContainer" >
                          <button className="searchbar__clear" onClick={handleClear}>
-              x
+              {/* x */}
          </button>
                     <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search Silk Reads"
+                    placeholder=""
                     className="searchbar__input"
                     onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                 />

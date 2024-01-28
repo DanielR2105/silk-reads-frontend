@@ -7,7 +7,9 @@
     height: 55px;
     margin: 0;
     padding: 0;
-    background-color: $light_teal;
+    background-color: $dark_teal;
+    border-color: black;
+    border-bottom: 1px solid $dark_orange;
 
     &__logo {
         margin-left: 40px;
@@ -33,7 +35,7 @@
         &__dropdown {
             border: 1px solid $light_orange;
             border-radius: 5px;
-            background-color: $light_teal;
+            background-color: $dark_teal;
             position: fixed;
 
         }
@@ -84,8 +86,9 @@
 .searchbar {
     position: absolute;
     display: flex;
-   margin-left: 350px;
-   margin-right: 150px;
+    margin-left: 350px;
+    margin-right: 150px;
+    margin-top: 3px;
     align-items: center;
     background-color: #F3F1EB;
     padding: 10px 20px; /* Adjust padding for icons */
