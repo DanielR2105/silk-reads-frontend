@@ -1,0 +1,37 @@
+@import '_colors';
+
+.hero {
+    padding-top: 55px;
+    background-color: $light_teal;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    align-items: center;
+    &__tagline {
+
+        &__logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        &__text {
+            font-size: 50px;
+            font-weight: bolder;
+            color: $medium_orange;
+        }
+
+        &__button {
+            background: transparent;
+            color: $medium_orange;
+            font-size: 40px;
+            border: none;
+            cursor: pointer;
+        }
+        &__button:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+

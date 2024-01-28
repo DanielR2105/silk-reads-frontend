@@ -56,15 +56,12 @@ const Navbar: React.FC = () => {
              </button>
              </div>
            <div className='navbar__button'>
-             {/* <button className='navbar__button__text'> 
-               <img src='/images/user.png' className='navbar__button__icon'/>
-             </button> */}
              <ProfileDropdown />
             </div>
             </div>
           ) : (
               <div className='navbar__button'>
-                <button className='navbar__button__text' >Get Started!</button>
+                <button className='navbar__button__text' >Get Started</button>
               </div>
           )}
       </div>
