@@ -1,0 +1,22 @@
+@import '_colors';
+
+.results {
+    background-color: $paper;
+    padding-top: 55px;
+}
+
+.book {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(20px, auto));
+    grid-template-columns: repeat(2, 1fr);
+    &__image {
+        grid-column: 1;
+        grid-row: span 3;
+        width: 100px;
+        height: 190px;
+        align-self: center;
+    }
+    &__title, &__author, &__description {
+        grid-column: 2;
+    }
+}

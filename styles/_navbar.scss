@@ -5,8 +5,6 @@
     display: flex;
     width: 100%;
     height: 55px;
-    margin: 0;
-    padding: 0;
     background-color: $dark_teal;
     border-color: black;
     border-bottom: 1px solid $dark_orange;
@@ -14,8 +12,7 @@
     &__logo {
         margin-left: 40px;
         width: 80px;
-        height: 55px;
-        margin-top: -5px;
+        height: 50px;
     }
 
     &__button {
@@ -90,7 +87,7 @@
     margin-right: 150px;
     margin-top: 3px;
     align-items: center;
-    background-color: #F3F1EB;
+    background-color: $paper;
     padding: 10px 20px; /* Adjust padding for icons */
     border-radius: 50px; /* Initial border-radius for circle shape */
     transition: all 0.3s ease;
@@ -130,7 +127,7 @@
       flex-grow: 1; /* Expand input in remaining space */
       padding: 8px;
       border: none;
-      background-color: #F3F1EB;
+      background-color: $paper;
       outline: none;
     }
   

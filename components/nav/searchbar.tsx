@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Searchbar: React.FC = () => {
-
     const [isExpanded, setIsExpanded] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
+    const router = useRouter();
 
     const handleExpandToggle = () => {
         setIsExpanded(!isExpanded);
@@ -17,9 +18,12 @@ const Searchbar: React.FC = () => {
         setIsExpanded(false);
     }
 
-    const handleSearch = () => {
-        alert(`Searching for "${searchQuery}"`);
-        setSearchQuery("");
+    const handleSearch = async () => {
+        if (searchQuery.length === 0) {
+            alert('Please enter a search term.');
+            return;
+          }
+            router.push(`/results/${searchQuery}`);
     }
 
     const handleClear = () => {
@@ -32,11 +36,7 @@ const Searchbar: React.FC = () => {
         <div className="searchbar"> 
 
         {isExpanded && (
-            // TODO: Fix issue where input and clear are being rendered under the search bar
             <div className="searchbar__inputContainer" >
-                         <button className="searchbar__clear" onClick={handleClear}>
-              {/* x */}
-         </button>
                     <input
                     type="text"
                     value={searchQuery}
