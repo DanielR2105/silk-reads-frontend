@@ -2,27 +2,34 @@
 
 .hero {
     padding-top: 55px;
-    background-color: $light_teal;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    align-items: center;
-    min-height: 100vh;
+    background-color: $paper;
     &__tagline {
-
-        &__logo {
-            width: 100px;
-            height: 100px;
+        background-color: $light_teal;
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+        grid-template-columns: repeat(2, 1fr);
+        &__img {
+            grid-column: 2;
+            grid-row: span 3;
+            align-items: right;
         }
-
+        &__logo {
+            grid-column: 1; 
+            grid-row: 1;
+            width: 140px;
+            height: 140px;
+            justify-self: center;
+        }
         &__text {
+            grid-column: 1;
+            grid-row: 2;
             font-size: 50px;
             font-weight: bolder;
-            color: $medium_orange;
+            color: $dark_orange;
         }
-
         &__button {
+            grid-column: 1;
+            grid-row: span 2;
             background: transparent;
             color: $medium_orange;
             font-size: 40px;
@@ -33,6 +40,10 @@
             font-weight: bold;
             text-decoration: underline;
         }
+    }
+    &__features1 {
+        display: flex;
+        justify-content: flex-end;
     }
 }
 

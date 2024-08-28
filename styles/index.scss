@@ -2,6 +2,8 @@
 @import '_home';
 @import '_navbar';
 @import '_hero';
+@import '_about';
+@import '_results';
 
 $background-image: url('../public/images/tealbookshelf.png');
 
@@ -11,14 +13,7 @@ body {
 }
 
 .renderedComponent {  
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #F3F1EB;
-  // background-color: $light_orange;
+  background-color: $light_teal
   }
 
   .footer {
