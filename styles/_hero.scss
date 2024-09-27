@@ -8,10 +8,12 @@
         display: grid;
         grid-template-rows: repeat(auto-fit, minmax(200px, auto));
         grid-template-columns: repeat(2, 1fr);
+        height: 45vw;
         &__img {
             grid-column: 2;
             grid-row: span 3;
-            align-items: right;
+            justify-self: right;
+            margin-top: 10px;
         }
         &__logo {
             grid-column: 1; 
@@ -25,7 +27,8 @@
             grid-row: 2;
             font-size: 50px;
             font-weight: bolder;
-            color: $dark_orange;
+            color: $medium_orange;
+            justify-self: center;
         }
         &__button {
             grid-column: 1;
@@ -35,15 +38,72 @@
             font-size: 40px;
             border: none;
             cursor: pointer;
+            justify-self: center;
         }
         &__button:hover {
             font-weight: bold;
             text-decoration: underline;
         }
     }
-    &__features1 {
-        display: flex;
-        justify-content: flex-end;
+    &__features {
+        display: grid;
+        grid-template-rows: repeat(3, minmax(200px, auto));
+        grid-template-columns: repeat(2, 1fr);
+        &__1 {
+            grid-column: 1;
+            grid-row:  1;
+            text-align: left;
+            justify-self: center;
+            height: 30vw;
+            margin-left: 50px;
+            &__text__title{
+                margin-top: 200px;
+            }
+            
+        }
+        &__1img {
+            grid-column: 2;
+            grid-row: 1;
+            height: 300px;
+            width: 300px;
+            margin-top: 150px; 
+            margin-left: 50px;   
+        }
+        &__2 {
+            grid-column: 2;
+            grid-row:  2;
+            text-align: right;
+            justify-self: center;
+            height: 30vw;
+            &__text__title{
+                margin-top: 200px;
+            }
+        }
+        &__2img {
+            grid-column: 1;
+            grid-row:  2;
+            height: 300px;
+            width: 300px;
+            margin-top: 150px; 
+            margin-left: 100px;
+        }
+        &__3 {
+            grid-column: 1;
+            grid-row:  3;
+            text-align: left;
+            justify-self: center;
+            height: 30vw;
+            &__text__title{
+                margin-top: 200px;
+            }
+        }
+        &__3img {
+            grid-column: 2;
+            grid-row:  3;
+            height: 300px;
+            width: 300px;
+            margin-top: 150px; 
+        }
     }
 }
 
